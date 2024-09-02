@@ -27,13 +27,17 @@ public class Main {
                     }
                     //at last replacing it with current alphabet
                     wordArr[swapPtr] = currAlpha;
+
+                    //since next word is swapped now move the alphaPtr to next value.
+                    alphaPtr++;
                 }
             }
-            ptr++;
+            //assigning ptr the alphaPtr value to reduce un necessary loop.
+            ptr=alphaPtr;
             if(ptr<wordArr.length)
                 currAlpha = wordArr[ptr];
         }
-        System.out.println(Arrays.toString(wordArr));
+        System.out.println(new String(wordArr));
 
         //Or Using streams
         Arrays.stream(word.split(""))
