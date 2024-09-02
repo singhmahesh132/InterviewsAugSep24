@@ -12,19 +12,21 @@ public class Main {
         int alphaPtr;
         char currAlpha = wordArr[0];
 
-
         while(ptr < wordArr.length){
             alphaPtr  = ptr;
-            //Finding the next instance of repeated character
+            //Finding the next instance of character
             for(int i = ptr; i < wordArr.length; i++){
 
-                //running loop to shift one character to right.
+                //if found then.
                 if(wordArr[i] == currAlpha) {
                     int swapPtr = i;
+
+                    //Running the loop to shift characters to right from back
                     while(swapPtr>alphaPtr){
                         wordArr[swapPtr] = wordArr[swapPtr-1];
                         swapPtr--;
                     }
+
                     //at last replacing it with current alphabet
                     wordArr[swapPtr] = currAlpha;
 
@@ -32,7 +34,8 @@ public class Main {
                     alphaPtr++;
                 }
             }
-            //assigning ptr the alphaPtr value to reduce un necessary loop.
+
+            //assigning ptr the alphaPtr value to reduce un-necessary loop.
             ptr=alphaPtr;
             if(ptr<wordArr.length)
                 currAlpha = wordArr[ptr];
