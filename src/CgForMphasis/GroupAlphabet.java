@@ -6,6 +6,8 @@ import java.util.stream.Collectors;
 
 /*
 write a java program to group repeating characters in a string also maintaining the order.
+String word = "maheshsingh"
+Output : mahhhessing
  */
 public class GroupAlphabet {
     public static void main(String [] args){

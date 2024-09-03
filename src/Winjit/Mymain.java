@@ -1,9 +1,6 @@
 package Winjit;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /*
 Problem Statement: write a program to collect string  of same character in an array.
@@ -15,7 +12,7 @@ public class Mymain {
     public static void main(String[] args){
         List<String> strList = List.of("abc", "java", "def", "cba", "vaja", "efd");
 
-        HashMap<String, ArrayList<String>> myMap = new HashMap<>();
+        Map<String, ArrayList<String>> myMap = new LinkedHashMap<>();
 
         for(String word : strList){
 
