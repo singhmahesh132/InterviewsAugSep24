@@ -1,8 +1,13 @@
+package CgForMphasis;
+
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.stream.Collectors;
 
-public class Main {
+/*
+write a java program to group repeating characters in a string also maintaining the order.
+ */
+public class GroupAlphabet {
     public static void main(String [] args){
         String word = "maheshsingh";
 

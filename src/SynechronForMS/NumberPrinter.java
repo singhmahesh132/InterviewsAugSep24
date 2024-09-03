@@ -17,6 +17,8 @@ THREAD-2 : 8
 THREAD-3 : 9
 THREAD-1 : 10
  */
+
+//public class NumberPrinter implements Runnable{
 public class NumberPrinter {
 
     private static final int N = 10; // Specify the upper limit of the sequence
@@ -66,8 +68,8 @@ public class NumberPrinter {
         */
 
         //Since Runnable is a Functional interface with only run() method. we can write above code as follows
-        //Or we can also make our class implement Runnable and provide run() method like in line 27
-        //and create new Thread using NumberPrinter object like in line 55.
+        //Or we can also make our class implement Runnable and provide run() method like in line 31
+        //and create new Thread using NumberPrinter object like in line 59.
         Runnable task = () -> {
             int threadId = Integer.parseInt(Thread.currentThread().getName());
             numberPrinter.printNumbers(threadId);
