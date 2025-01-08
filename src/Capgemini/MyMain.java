@@ -14,7 +14,7 @@ public class MyMain {
         List<String> mylist = List.of("Java", "World", "Mahesh", "12345", "203040", "Capgemini","a2bc");
         mylist.stream()
                 .filter(word -> !word.matches("\\d+"))
-                .sorted((s1,s2) -> Character.compare(s1.charAt(1), s2.charAt(2)))
+                .sorted((s1,s2) -> Character.compare(s1.charAt(1), s2.charAt(2)))  //sorted(Comparator.comparing(s->s.charAt(1)));
                 .forEach(System.out::println);
 
         /*
